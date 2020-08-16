@@ -1,0 +1,67 @@
+Arguments: 
+  /usr/local/bin/node /Users/adewoyinoladipupo-usoro/.yarn/bin/yarn.js install
+
+PATH: 
+  /Users/adewoyinoladipupo-usoro/.yarn/bin:/Users/adewoyinoladipupo-usoro/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.18.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/adewoyinoladipupo-usoro/Dev_Projects/aawork/aawork-server/package.json: Unexpected token } in JSON at position 238
+      at JSON.parse (<anonymous>)
+      at /Users/adewoyinoladipupo-usoro/.yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/adewoyinoladipupo-usoro/.yarn/lib/cli.js:310:30)
+      at /Users/adewoyinoladipupo-usoro/.yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "aawork",
+    "version": "1.0.0",
+    "description": "CMS application",
+    "main": "index.js",
+    "scripts": {
+      "start": "cross-env NODE_ENV=production node index",
+      "server": "cross-env NODE_ENV=development nodemon index",
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Gnbiggs/aawork.git"
+    },
+    "author": "Ade&Ash",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/Gnbiggs/aawork/issues"
+    },
+    "homepage": "https://github.com/Gnbiggs/aawork#readme",
+    "dependencies": {
+      "bcryptjs": "^2.4.3",
+      "cookie-parser": "^1.4.5",
+      "cors": "^2.8.5",
+      "cross-env": "^7.0.2",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "jsonwebtoken": "^8.5.1",
+      "moment": "^2.27.0",
+      "morgan": "^1.10.0",
+      "pg": "^8.2.1",
+      "puppeteer": "^4.0.1"
+    },
+    "devDependencies": {
+      "concurrently": "^5.2.0",
+      "nodemon": "^2.0.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

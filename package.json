@@ -1,0 +1,22 @@
+{
+  "name": "ReviewCenter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm run server --prefix ReviewCenter-server",
+    "client": "npm start --prefix ReviewCenter-client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": "https://github.com/nucternal18/ReviewCenter.git",
+  "author": "Adewoyin Oladipupo-Usoro <aolausoro.tech>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/uuid": "^8.0.0",
+    "@types/validator": "^13.1.0",
+    "concurrently": "^5.2.0"
+  },
+  "dependencies": {
+    "uuid": "^8.2.0",
+    "validator": "^13.1.1"
+  }
+}

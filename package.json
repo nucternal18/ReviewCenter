@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "server": "npm run server --prefix ReviewCenter-server",
-    "client": "npm start --prefix ReviewCenter-client",
+    "client": "npm start --prefix ReviewCenter-Client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": "https://github.com/nucternal18/ReviewCenter.git",

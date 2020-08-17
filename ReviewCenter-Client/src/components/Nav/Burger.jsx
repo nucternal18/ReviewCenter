@@ -20,8 +20,8 @@ const Burger = () => {
 const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
-  position: fixed;
-  top: 15px;
+  position: absolute;
+  top: 20px;
   right: 20px;
   z-index: 20;
   display: none;

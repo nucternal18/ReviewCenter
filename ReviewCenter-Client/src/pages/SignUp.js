@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../context/auth/AuthContext";
-import { useHistory, Redirect } from "react-router-dom";
+import {  Redirect, Link } from "react-router-dom";
 
 // custom-hook
 import useErrorHandler from "../utils/custom-hooks/ErrorHandler";
@@ -57,14 +57,23 @@ const SignUp = () => {
   }
 
   return (
-    <div className="form-container">
-      <h1>
-        Account <span className="text-primary">Sign up</span>
+    <div className="w-full mx-auto  max-w-md">
+      <h1 className="my-8 text-center text-3xl">
+        Account <span className="text-blue-700">Sign up</span>
       </h1>
-      <form onSubmit={onSubmit}>
-        <div className="form-group">
-          <label htmlFor="email">First Name</label>
+      <form
+        onSubmit={onSubmit}
+        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+      >
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-base font-bold mb-2"
+            htmlFor="email"
+          >
+            First Name
+          </label>
           <input
+            className="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             name="first_name"
             value={first_name}
@@ -72,9 +81,15 @@ const SignUp = () => {
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Last Name</label>
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-base font-bold mb-2"
+            htmlFor="email"
+          >
+            Last Name
+          </label>
           <input
+            className="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             name="last_name"
             value={last_name}
@@ -82,9 +97,15 @@ const SignUp = () => {
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email Address</label>
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-base font-bold mb-2"
+            htmlFor="email"
+          >
+            Email Address
+          </label>
           <input
+            className="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="email"
             name="email"
             value={email}
@@ -92,9 +113,15 @@ const SignUp = () => {
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-base font-bold mb-2"
+            htmlFor="password"
+          >
+            Password
+          </label>
           <input
+            className="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="password"
             name="password"
             value={password}
@@ -102,9 +129,15 @@ const SignUp = () => {
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Confirm Password</label>
+        <div className="mb-8">
+          <label
+            className="block text-gray-700 text-base font-bold mb-2"
+            htmlFor="password"
+          >
+            Confirm Password
+          </label>
           <input
+            className="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="password"
             name="confirm password"
             value={confirmpassword}
@@ -113,11 +146,20 @@ const SignUp = () => {
           />
         </div>
         {isError && <ErrorMessage errorMessage={error} />}
-        <input
-          type="submit"
-          value="Sign Up"
-          className="btn btn-primary btn-block"
-        />
+
+        <div className="flex items-center justify-between">
+          <button
+            className="bg-blue-500 w-2/5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >
+            Sign Up
+          </button>
+          <p
+            className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+          >
+            Already Registered? <span className="text-blue-700"><Link to='/login'>login</Link></span>
+          </p>
+        </div>
       </form>
     </div>
   );

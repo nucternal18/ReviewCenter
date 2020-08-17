@@ -38,7 +38,7 @@ const RightNav = ({ open, setOpen }) => {
   const guestLinks = (
     <>
       <li>
-        <Link to="/" className="link">
+        <Link to="/categories" className="link">
           Categories
         </Link>
       </li>
@@ -79,7 +79,7 @@ const Ul = styled.ul`
     top: 0;
     right: 0;
     height: 100vh;
-    width: 400px;
+    width: 80%;
     padding-top: 3.5rem;
     opacity: 0.7;
     transition: transform 0.3s ease-in-out;
